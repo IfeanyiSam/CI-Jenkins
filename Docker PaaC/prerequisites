@@ -1,0 +1,6 @@
+IAM user with ecr permissions
+Store AWS cred in jenkins
+ECR repository on AWS
+Install Docker pipeline plug-in
+Install ECR plug-in 
+Install docker engine on jenkins

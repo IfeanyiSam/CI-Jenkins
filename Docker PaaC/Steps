@@ -1,0 +1,11 @@
+Install Docker engine in jenkins {
+    Add jenkins user to docker group and reboot
+}
+Install AWS CLI
+Create IAM USER in AWS
+Create ECR repository
+plug-ins in jenkins{
+    ECR, Docker pipeline, aws sdk for credentials
+}
+Store AWS credentials in jenkins
+Run the pipeline
