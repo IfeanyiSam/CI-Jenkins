@@ -2,10 +2,17 @@ Install Docker engine in jenkins {
     Add jenkins user to docker group and reboot
 }
 Install AWS CLI
-Create IAM USER in AWS
-Create ECR repository
-plug-ins in jenkins{
-    ECR, Docker pipeline, aws sdk for credentials
+Create IAM USER in AWS {
+    user:jenkins, policies: AmazonEC2ContainerRegistryFullAccess and AmazonECS_FullAccess
+    generate AccessKeys
 }
-Store AWS credentials in jenkins
+Create ECR repository {
+    name: #, Visibility settings: private, 
+}
+plug-ins in jenkins{
+    ECR, Docker pipeline, aws sdk for credentials, CloudBees Docker BUild and Publish
+}
+Store AWS credentials in jenkins {
+    manage jenkins - manage credentials - jenkins (global) - global credentials - add - AWS credentials(provide the appropriate detaials)
+}
 Run the pipeline
