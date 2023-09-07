@@ -1,0 +1,17 @@
+Create an ECS cluster on AWS {
+    name: '#', select subnets (all preferably in that vpc), enable container insights, give tags 
+    }
+    Create Task Definitions {
+        name: '#', launch type: AWS Fargate, fill the container section: NB image URL is ECS url, add tags. 
+        after creating task, update the role by adding a policy(CloudWatchLogsFullAccess)
+    }
+
+Create an ECS service {
+    family: taskcreatedintaskdefinition, give the service a name,  desired tasks: 1, security grp: http & custom TCP at port 8080. Both Anywhere
+    loadbalancertype: ALB, give name, fill the rest as per your needs
+}
+edit the pipeline code provide the appropriate details
+
+install plugin: pipeline:aws steps
+
+
